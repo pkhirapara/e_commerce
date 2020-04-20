@@ -7,13 +7,14 @@ module.exports={
             password:req.body.password,
             mob:req.body.mobile
         })
-        registermodal.find({username:req.body.username}).select('username').lean().then(user=>{
+        registermodal.findOne({username:req.body.username}).select('username').lean().then(user=>{
             console.log(user)
             if(user){
                 res.json({message:"User already exists"})
         }else{
         registerfields.save().then(data=>{
-            if(data){
+            console.log(data)
+            if(data){                
                 res.json({status:true,data:data,message:"data"});
                 res.end();
             }else{
