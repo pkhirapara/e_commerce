@@ -5,7 +5,8 @@ const registerfields=new Schema({
     username:{type:String},
     email:{type:String},
     password:{type:String},
-    mob:{type:Number}
+    mob:{type:Number},
+    count:{type:Number}
 });
 registerfields.pre('save', async function (next){
     //hash password before saving the user model
