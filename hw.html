@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <script>
+      // map() method
+      var arr = [10, 20, 30, 40, 50];
+      var newArr = arr.map(function (value, i) {
+        console.log(value);
+      });
+      var arr1 = [
+        { price: "100", product: "Mobile" },
+        { price: "200", product: "Laptop" },
+        { price: "300", product: "Mic" },
+        { price: "400", product: "PC" },
+      ];
+      // IMPORTANT!!!
+      // with this we can show object as an array
+      // From: 100 200 300 400 To: [100,200,300,400]
+      // var newArr1=arr1.map(function(value){
+      //     return value.price;//value.product;
+      // });
+      // above is long method than below shortcut
+      var newArr1 = arr1.map((value) => value.price);
+      console.log(newArr1);
+
+      var ages = [32, 33, 16, 40];
+      // array filter()
+      var result = ages.filter((item) => {
+        if (item > 30) {
+          return item;
+        }
+      });
+      console.log(result);
+      // array find()
+      var result1 = ages.find((x) => x > 35);
+      console.log(result1);
+      // array push()
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.push("Kiwi", "Lemon", "Pineapple");
+      console.log(fruits);
+      // array pop()
+      var fruits1 = ["Banana", "Orange"];
+      fruits1.pop();
+      console.log(fruits1);
+
+      // array shift()
+      var fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+      fruits2.shift();
+      console.log(fruits2);
+      // array unshift()
+      var fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+      fruits3.unshift("Abc");
+      console.log(fruits3);
+      // array reverse
+      var a = ["x", "y", "z"];
+      a.reverse();
+      console.log(a);
+
+      // array forEach()
+      var b = ["a", "b", "c"];
+      b.forEach(function (entry) {
+        console.log(entry);
+      });
+      // array sort()
+      var c = ["Banana", "Orange", "Apple", "Mango"];
+      c.sort();
+      console.log(c);
+      // array splice()
+      var s = ["Banana", "Orange", "Apple", "Mango"];
+      s.splice(2, 0, "Lemon", "Kiwi");
+      console.log(s);
+
+      // DATE()
+      var x = new Date();
+      console.log(x);
+      // new Date(year, month, day, hour, minute, second, and millisecond)
+      var ab = new Date(2018, 11, 24, 10, 33, 30, 0);
+      console.log(ab);
+      // new Date(dateString)
+      var w = new Date("October 13, 2014 11:13:00");
+      console.log(w);
+    </script>
+  </body>
+</html>
