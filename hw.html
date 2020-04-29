@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Page Title</title>
+    <title>Array Methods</title>
   </head>
   <body>
-    <script>
+    <!-- <script>
       // map() method
       var arr = [10, 20, 30, 40, 50];
       var newArr = arr.map(function (value, i) {
@@ -82,6 +82,26 @@
       // new Date(dateString)
       var w = new Date("October 13, 2014 11:13:00");
       console.log(w);
+    </script> -->
+    <script>
+      // concat()
+      var hege = ["Cecilie", "Lone"];
+      var stale = ["Emil", "Tobias", "Linus"];
+      var children = hege.concat(stale);
+      console.log(children);
+      // constructor
+      // The constructor property returns an array's constructor function:
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.constructor;
+      console.log(fruits);
+      // entries()
+      var fr = ["Banana", "Orange", "Apple", "Mango"];
+      var f = fr.entries();
+      console.log(fr);
+      // filter()
+      var ages = [32, 33, 16, 40];
+      ages.filter();
+      console.log(ages);
     </script>
   </body>
 </html>
