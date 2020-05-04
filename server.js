@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require("./routes/routes");
 const app = express();
-
+app.use(cors());
 mongoose.connect(
   "mongodb://localhost:27017/e_commerce",
   { useNewUrlParser: true },
